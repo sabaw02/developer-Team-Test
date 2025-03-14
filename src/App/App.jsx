@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../pages/layout";
 import Landing from "../pages/landing/landing";
 import { QueryClient, QueryClientProvider } from "react-query";
+import Course from "../pages/course/course";
 
 function App() {
   const client = new QueryClient()
@@ -14,6 +15,10 @@ function App() {
           path: "/",
           element: <Landing />,
         },
+        {
+          path: "/course",
+          element: <Course />,
+        },  
       ],
     },
   ]);
